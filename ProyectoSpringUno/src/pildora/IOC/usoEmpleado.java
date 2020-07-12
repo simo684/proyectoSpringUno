@@ -12,7 +12,7 @@ public class usoEmpleado {
 		ClassPathXmlApplicationContext contexto = new ClassPathXmlApplicationContext("applicationContext.xml");
 		empleados juan = contexto.getBean("miEmpleado", empleados.class);
 		System.out.println( juan.getTareas());
-		
+		System.out.println(juan.getInformes());
 		contexto.close();
 		
 	}

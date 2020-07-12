@@ -8,8 +8,12 @@ http://www.springframework.org/schema/context/spring-context-3.1.xsd "
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
  xmlns="http://www.springframework.org/schema/beans">
  
- <bean id="miEmpleado" class="pildora.IOC.secretEmpleado">
+ <!-- CREATION DE LA DEPENDENCIA -->
  
+ <bean id="miInforme" class="pildora.IOC.Informes"></bean>
+ 
+ <bean id="miEmpleado" class="pildora.IOC.secretEmpleado">
+ <constructor-arg ref="miInforme"></constructor-arg>
  
  
  </bean>
